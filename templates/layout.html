@@ -1,0 +1,55 @@
+{#<!doctype html>#}
+
+
+<title>BKHN</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='d3/d3.min.js') }}"></script>
+
+
+
+
+<script src="{{ url_for('static', filename='js/jquery-3.1.1.js') }}"></script>
+<script src="{{ url_for('static', filename='d3/d3.v3.min.js') }}"></script>
+
+
+{#    Date picker#}
+<script src="{{ url_for('static', filename='js/bootstrap-datetimepicker.min.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-datetimepicker.min.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-combined.min.css') }}">
+{#<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.1.1.js') }}"></script>#}
+
+<div class="container" align="center">
+
+
+        <h1>HỆ THỐNG QUẢN LÝ NGƯỜI QUA LẠI BKHN</h1>
+
+        {#    <div class="metanav">
+
+        <button type="button" class="bt">Login</button>
+        {% if not session.logged_in %}
+            <a href="{{ url_for('login') }}">
+                <button type="button" class="btn btn-primary">Login</button>
+            </a>
+        {% else %}
+            <a href="{{ url_for('logout') }}">log out</a>
+        {% endif %}
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block body %}{% endblock %}
+
+</div>#}
+
+        {% block content %}{% endblock %}
+
+</div>
